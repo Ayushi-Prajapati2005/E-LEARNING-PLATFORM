@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Learning Platform</title>
+     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: #181818;
+            color: #E0E0E0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #009688; /* Updated teal color */
+            color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        nav {
+            background: #00796b; /* Darker teal */
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #80cbc4; /* Lighter teal for hover effect */
+        }
+
+        .container {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .course-nav {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            gap: 15px;
+        }
+
+        .course-nav a {
+            text-decoration: none;
+            background: #009688; /* Updated teal color */
+            padding: 10px 15px;
+            color: white;
+            font-weight: 600;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .course-nav a:hover {
+            background: #00796b; /* Darker teal for hover effect */
+        }
+
+        .course-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .course-card {
+            background: #2c2c2c;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .course-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .course-card-content {
+            padding: 20px;
+        }
+
+        .course-card-content h3 {
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+            color: #80cbc4; /* Lighter teal */
+        }
+
+        .progress-bar {
+            height: 10px;
+            background: #444;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+
+        .progress {
+            height: 100%;
+            background: #4caf50;
+        }
+
+        footer {
+            background: #009688; /* Updated teal color */
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+            margin-top: 40px;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            margin-bottom: 20px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .button {
+            background: #009688; /* Updated teal color */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .button:hover {
+            background: #00796b; /* Darker teal for hover effect */
+        }
+
+        input[type="text"], textarea {
+            padding: 10px;
+            border: 1px solid #555;
+            border-radius: 5px;
+            width: 100%;
+            margin-bottom: 15px;
+            background: #333;
+            color: #fff;
+        }
+
+        textarea {
+            min-height: 120px;
+        }
+
+        .course-card-content p {
+            color: #bbb;
+        }
+
+        .progress-bar {
+            background: #333;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#video">Video</a></li>
+            <li><a href="#comment">Comments</a></li>
+            <li><a href="#footer">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header id="home">
+        <h1>Learn Anytime, Anywhere</h1>
+        <p>Explore our rich collection of courses and upskill at your own pace.</p>
+    </header>
+
+    <div class="container">
+        <h2 id="courses">Available Courses</h2>
+
+        <!-- Course Navigation Links -->
+
+        <br>
+        <div class="course-nav">
+            <a href="#web-dev">Web Development</a>
+            <a href="#python">Python Programming</a>
+            <a href="#data-science">Data Science</a>
+            <a href="#cybersecurity">Cybersecurity</a>
+            <a href="#cloud-computing">Cloud Computing</a>
+            <a href="#ui-ux">UI/UX Design</a>
+        </div>
+<br>
+        <!-- Courses List -->
+        <div class="course-list">
+            <div class="course-card" id="web-dev">
+                <img src="1.jpg" alt="Web Development">
+                <div class="course-card-content">
+                    <h3>Web Development Bootcamp</h3>
+                    <p>Learn HTML, CSS, JavaScript, and more.</p>
+                    <div class="progress-bar"><div class="progress" style="width: 70%;"></div></div>
+                </div>
+            </div>
+            <div class="course-card" id="python">
+                <img src="3.jpg.jpg" alt="Python Programming">
+                <div class="course-card-content">
+                    <h3>Python Programming</h3>
+                    <p>Master Python with hands-on projects and real-world applications.</p>
+                    <div class="progress-bar"><div class="progress" style="width: 50%;"></div></div>
+                </div>
+            </div>
+            <div class="course-card" id="data-science">
+                <img src="thumb2.jpg" alt="Data Science">
+                <div class="course-card-content">
+                    <h3>Data Science Essentials</h3>
+                    <p>Learn data analysis, visualization, and machine learning fundamentals.</p>
+                    <div class="progress-bar"><div class="progress" style="width: 30%;"></div></div>
+                </div>
+            </div>
+            <div class="course-card" id="cybersecurity">
+                <img src="thumb3.jpg" alt="Cybersecurity">
+                <div class="course-card-content">
+                    <h3>Cybersecurity Basics</h3>
+                    <p>Understand cyber threats, secure systems, and ethical hacking.</p>
+                    <div class="progress-bar"><div class="progress" style="width: 60%;"></div></div>
+                </div>
+            </div>
+            <div class="course-card" id="cloud-computing">
+                <img src="thumb4.jpg" alt="Cloud Computing">
+                <div class="course-card-content">
+                    <h3>Cloud Computing</h3>
+                    <p>Learn about AWS, Azure, and Google Cloud platforms.</p>
+                    <div class="progress-bar"><div class="progress" style="width: 40%;"></div></div>
+                </div>
+            </div>
+            <div class="course-card" id="ui-ux">
+                <img src="3.jpg" alt="UI/UX Design">
+                <div class="course-card-content">
+                    <h3>UI/UX Design Principles</h3>
+                    <p>Learn to design user-friendly and beautiful interfaces.</p>
+                    <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+                </div>
+            </div>
+        </div>
+
+        <h2 id="video" style="margin-top: 40px;">Course Video</h2>
+        <br>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <h2 id="comment">Leave a Comment</h2>
+        <br>
+        <textarea id="comment-box" placeholder="Write your thoughts here..."></textarea>
+        <button class="button" onclick="submitComment()">Submit</button>
+        <div id="comment-output"></div>
+    </div>
+
+<footer id="footer" style="background: #009688; color: white; padding: 40px 20px; text-align: center;">
+    <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+
+        <!-- About Section -->
+        <div style="flex: 1 1 250px;">
+            <h3>About Us</h3>
+            <p>We are an online learning platform offering a variety of courses to help you enhance your skills and knowledge. Learn at your own pace from anywhere, anytime.</p>
+        </div>
+
+        <!-- Quick Links Section -->
+        <div style="flex: 1 1 200px;">
+            <h3>Quick Links</h3>
+            <ul style="list-style-type: none; padding-left: 0;">
+                <li><a href="#home" style="color: white; text-decoration: none;">Home</a></li>
+                <li><a href="#courses" style="color: white; text-decoration: none;">Courses</a></li>
+                <li><a href="#video" style="color: white; text-decoration: none;">Videos</a></li>
+                <li><a href="#comment" style="color: white; text-decoration: none;">Comments</a></li>
+                <li><a href="#footer" style="color: white; text-decoration: none;">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Social Media Section with Icons -->
+        <div style="flex: 1 1 200px;">
+            <h3>Follow Us</h3>
+            <div style="display: flex; gap: 20px; justify-content: center;">
+                <a href="https://facebook.com" style="color: white; font-size: 24px; text-decoration: none;">
+                    <i class="fab fa-facebook-square"></i> Facebook
+                </a>
+                <a href="https://twitter.com" style="color: white; font-size: 24px; text-decoration: none;">
+                    <i class="fab fa-twitter-square"></i> Twitter
+                </a>
+                <a href="https://instagram.com" style="color: white; font-size: 24px; text-decoration: none;">
+                    <i class="fab fa-instagram-square"></i> Instagram
+                </a>
+                <a href="https://linkedin.com" style="color: white; font-size: 24px; text-decoration: none;">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </div>
+        </div>
+
+        <!-- Contact Form Section (Email + Name) -->
+        <div style="flex: 1 1 180px; padding: 20px; background-color: #00796b; border-radius: 8px;">
+            <h3>Contact Us</h3>
+            <form action="#" method="post" style="display: flex; flex-direction: column; gap: 10px;">
+                <input type="text" name="name" placeholder="Your Name" required style="padding: 10px; border-radius: 5px; border: none; background-color: #004d40; color: white;"/>
+                <input type="email" name="email" placeholder="Your Email" required style="padding: 10px; border-radius: 5px; border: none; background-color: #004d40; color: white;"/>
+                <textarea name="message" placeholder="Your Message" required style="padding: 10px; border-radius: 5px; border: none; min-height: 80px; background-color: #004d40; color: white;"></textarea>
+                <button type="submit" style="padding: 4px 10px; background-color: #44b785; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 12px;">
+                      Send Message
+                 </button>
+
+            </form>
+        </div>
+
+    </div>
+
+    <div style="margin-top: 30px; font-size: 14px;">
+        <p>&copy; 2025 E-Learning Platform. All rights reserved.</p>
+    </div>
+</footer>
+    <script>
+        function submitComment() {
+            const commentBox = document.getElementById('comment-box');
+            const commentOutput = document.getElementById('comment-output');
+            const comment = commentBox.value.trim();
+
+            if (comment) {
+                const newComment = document.createElement('p');
+                newComment.textContent = comment;
+                commentOutput.appendChild(newComment);
+                commentBox.value = '';
+            } else {
+                alert('Please write a comment before submitting.');
+            }
+        }
+    </script>
+</body>
+</html>
