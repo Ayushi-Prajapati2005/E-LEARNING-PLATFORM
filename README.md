@@ -82,3 +82,12 @@ To add more courses to the course list:
     - A `p` tag for the course description.
     - A `progress-bar` div for showing course progress.
 
+# output
+
+![Image](https://github.com/user-attachments/assets/bc5a8650-89e7-4504-9b2d-2008bd99d4b5)
+
+![Image](https://github.com/user-attachments/assets/1fd76240-24ab-4c4f-ada4-d2cfd6bf4c41)
+
+![Image](https://github.com/user-attachments/assets/95b80a55-1ee8-4e27-b39b-aa56f0f7553e)
+
+![Image](https://github.com/user-attachments/assets/febe5620-b2fa-41b7-a0ea-7ea106b67e81)
