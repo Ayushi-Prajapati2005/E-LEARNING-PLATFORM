@@ -1,16 +1,10 @@
 # E-LEARNING-PLATFORM
 
-COMPANY: CODTECH IT SOLUTIONS
 
 NAME: Prajapati Ayushi Bhaveshkumar
 
-INTERN ID: CT04DA46
-
 DOMAIN: Frontend Web Development
 
-DURATION: 4 WEEKS
-
-MENTOR: NEELA SANTOSH
 # E-Learning Platform Frontend
 
 This project is the frontend of an E-Learning platform designed with HTML, CSS, and basic JavaScript. It includes features such as course listings, video embedding, progress tracking, and a contact form for user inquiries. The platform is responsive and can be used on both mobile and desktop devices.
